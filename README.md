@@ -6,10 +6,20 @@ The goal behind this repository is to provide some Caddyfile examples and also p
 
 ## Installation
 
-Simply clone this repository and make sure caddy is installed. On macOS, you can install caddy from brew
+Simply clone this repository and make sure caddy is installed. On macOS, you can install caddy from brew:
 
 ``` bash
 brew install caddy
+```
+
+
+
+## Usage
+
+To launch caddy and use a configuration file (an exampel is available in this repo), type the following command:
+
+```bash
+caddy -conf pathto/caddyconf
 ```
 
 
