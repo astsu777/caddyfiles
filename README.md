@@ -1,29 +1,15 @@
 # Caddy - Sample Configuration
 
-The goal behind this repository is to provide some Caddyfile examples and also provide some sample other files like certificates which are not automatic (very basic and simple though).
-
-
+The goal behind this repository is to provide some Caddyfile examples and also provide some sample other files like custom SSL certificates and local HTML files.
 
 ## Installation
 
-Simply clone this repository and make sure caddy is installed. On macOS, you can install caddy from brew:
-
-``` bash
-brew install caddy
-```
-
-
+Simply clone this repository and make sure caddy is installed.
 
 ## Usage
 
-To launch caddy and use a configuration file (an exampel is available in this repo), type the following command:
+To launch caddy and use a configuration file, type the following command:
 
 ```bash
 caddy -conf pathto/caddyconf
 ```
-
-
-
-## Support
-
-While I can provide support for all my other repository here on GitHub, I will not provide support for this one. If the script does not work for you, feel free to debug it by yourself as I won't help you.

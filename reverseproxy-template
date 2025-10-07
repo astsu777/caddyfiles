@@ -1,0 +1,35 @@
+{
+  # Email address for Let's Encrypt
+  email <ADDRESS>@<MYDOMAIN.COM>
+    log {
+      level WARN
+    }
+}
+
+mydomain.com{
+
+  # Blacklist an IP address
+  @blocked remote_ip 94.140.165.121
+
+  # Respont with 403/HTTP code to all other IP addresses
+  respond @blocked 403
+
+  # Backend running with HTTPS
+  reverse_proxy localhost:8443 {
+    transport http {
+      tls
+      tls_insecure_skip_verify
+    }
+  }
+}
+
+gaming01.ictpourtous.com {
+  # Allow only a single IP address to connect
+  @blocked not remote_ip 94.140.165.121
+
+  # Respont with 444/HTTP code to all other IP addresses
+  respond @blocked 444
+
+  # Backend running with plain HTTP
+  reverse_proxy localhost:8080
+}
